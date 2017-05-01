@@ -7,6 +7,12 @@ defmodule Sample.Utils do
   def sum(a,b) do
     a+b
   end
+
+
+  # anonymous function test
+  def anon_test(a,f) do
+    f.(a)
+  end
 end
 
 
@@ -15,5 +21,7 @@ IO.puts Enum.map([1,2,3,4,5], &Sample.Utils.square/1)
 
 # using anonymous functions
 IO.puts Enum.map([1,2,3,4,5], fn(x) -> x*x end)
+
+Sample.Utils.anon_test("test string", fn(x) -> IO.puts x end)
 
 # Use f.(arg) if you want to call an anonymous function from a fucniton!
