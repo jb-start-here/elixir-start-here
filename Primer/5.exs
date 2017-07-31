@@ -12,6 +12,7 @@ defmodule Sample.Enum do
     head
   end
 
+  # method overloading is also suported
   # It mtches this function if an empty list is passed to it.
   def first_2([]) do
     nil
