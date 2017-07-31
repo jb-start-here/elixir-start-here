@@ -88,3 +88,4 @@ end
 EnterpriseModule.test_method # oink
 EnterpriseModule.another_test # oink,bork
 EnterpriseModule.one_more_test(5) # The number 5 is even? ans: false
+EnterpriseModule.one_more_test 5 # parenthesis are optional for elixir method invocation
