@@ -1,7 +1,7 @@
 # A sample module
 
 
-# there is an Enum module already written so we will namespace it in Enum
+# there is an Enum module already written so we will namespace it in Sample
 defmodule Sample.Enum do
   def first(list) do
     hd list
