@@ -4,7 +4,7 @@ defmodule Sample.Sounds do
 
   # Guard clause actually determines which function is matched and run.
 
-  # defaulr params with \\
+  # default params with \\
   def generate_sound(thing \\ "object")
   def generate_sound(thing) when thing == "car", do: "Honk"
   def generate_sound(thing) when thing == "grenade", do: "Boom"
