@@ -8,6 +8,7 @@ IO.puts sum.(5, 6)
 
 # in elxir anon functions are so common that there is a shorthand notation for doing it.
 sum2 = &(&1 + &2)
+# where '&' is the capture operator
 IO.puts sum2.(5, 6)
 # here &1 and &2 are forst and second parameters
 
@@ -59,3 +60,10 @@ end
 
 IO.puts Sample.greet "joel"
 IO.puts Sample.Next.greet_2 {:ok, 'go'}
+
+#  We can also capture functions using the familiar capture operator '&'
+
+fun = &Enum.map/2
+another_fun = &Sample.greet/1
+
+IO.puts another_fun.("j03L")
