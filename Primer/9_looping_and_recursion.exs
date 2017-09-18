@@ -62,4 +62,15 @@ Enum.sort([%{:val => 4}, %{:val => 1}], fn(x, y) -> x[:val] > y[:val] end)
 puts Enum.reduce([1,2,3,4,5,6,7,8,9], fn(x,acc) -> x+acc end)
 
 
-a = a: "some test"
+# In Elixir, it is common to loop over an Enumerable,
+# often filtering out some results and mapping values into another list.
+# Comprehensions are syntactic sugar for such constructs: 
+# they group those common tasks into the for special form.
+
+for n <- [1, 2, 3, 4], do: n * n
+# => [1, 4, 9, 16]
+
+# In the expression above, n <- [1, 2, 3, 4] is the generator. `<-` the generator operator
+# It is literally generating values to be used in the comprehension.
+# Any enumerable can be passed on the right-hand side of the generator expression
+
